@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/style/w3.css}">
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+
+<body>
+    <div th:fragment="userSkillFragment(userSkill)">
+        <p><span th:text="${userSkill.skill.skillName}">Adobe Photoshop</span></p>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal"
+                th:style="'width:' + ${userSkill.level * 10} + '%'" th:text="${userSkill.level * 10} + '%'">90%
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

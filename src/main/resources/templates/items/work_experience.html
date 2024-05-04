@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/style/w3.css}">
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+
+<body>
+    <div th:fragment="workExperienceFragment(workExperience)" class="w3-container">
+        <h5 class="w3-opacity"><b><span th:text="${workExperience.jobTitle} + ' / ' + ${workExperience.company} ">Front
+                    End Developer / w3schools.com</span></b></h5>
+        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+            <span th:text="${#temporals.format(workExperience.startDate, 'MMM yyyy')} + ' - '"></span>
+            <span th:if="${workExperience.endDate == null}" class="w3-tag w3-teal w3-round">Current</span>
+            <span th:if="${workExperience.endDate != null}"
+                th:text="${#temporals.format(workExperience.endDate, 'MMM yyyy')}"></span>
+        </h6>
+        <p><span th:text="${workExperience.jobDescription}">Lorem ipsum dolor sit amet. Praesentium magnam consectetur
+                vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque
+                repellendus iure, iste.</span></p>
+        <hr>
+    </div>
+</body>
+
+</html>
