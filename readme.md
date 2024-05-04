@@ -32,6 +32,7 @@ So, dive in and enjoy exploring!
 ## Features
 
 - Users can create and update their profiles.
+     you need to add data directly to database and you can see the view by using GET localhost:8080/profiles/{id}.
 - Users can add their skills, languages, work experiences, and education to their profiles.
 - Users can view other users' profiles.
 
